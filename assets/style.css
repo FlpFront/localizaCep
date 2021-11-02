@@ -1,0 +1,174 @@
+*{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background: #1F1F23;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    max-width: 1200px;
+    margin: 90px auto;
+}
+
+.content{
+    margin: 0 auto;
+}
+
+.title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.title::after{
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #9466FF;
+    display: block;
+    margin: 5px auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.form label, input{
+    display: block;
+}
+
+.form label{
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.form input{
+    width: 700px;
+    background: none;
+    border: 2px solid #9466FF;
+    border-radius: 2px;
+    padding: 25px 20px;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+.form input:focus{
+    border-color: #380d9c;
+}
+
+.form button{
+    width: 240px;
+    background: #9466FF;
+    align-self: flex-end;
+    border-radius: 2px;
+    border: none;    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 20px 10px;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.form button:hover{
+    background: #380d9c;
+}
+
+.cepReturn{
+    width: 100%;
+    height: 220px;
+    margin: 40px 0;
+    border: 2px solid #9466FF;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cepReturn p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.cepReturn p + p{
+    margin-top: 15px;
+}
+
+.cepReturn span{
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+@media (max-width: 800px){
+    
+    .container{
+        display: flex;
+        max-width: 300px;
+    }
+    
+    .content{
+        margin: 0 auto;
+    }
+
+    .title{
+        font-size: 3.6rem;
+    }
+
+    .form input{
+        width: 300px;
+    }
+    .form button{
+        width: 140px;
+        font-size: 1.6rem;
+        padding: 15px 10px;
+    }
+
+    .cepReturn p{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        color: #fff;
+        font-size: 1.6rem;
+    }
+    
+}
+
+.errorActive{
+    display: none;
+}
+
+#cepInvalido{
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.footer{
+    text-align: center;
+    background: #9466FF;
+    padding: 20px 0;    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #fff;
+}

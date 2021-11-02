@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Localiza Cep</title>
+
+</head>
+<body>
+
+    <main class="container">
+       <div class="content">
+            <h1 class="title">Localiza Cep</h1>
+            
+            <form class="form" aria-label="Informar o cep">
+                <label>Digite o Cep:</label>
+                <input data-form="input" type="text" required placeholder="Exemplo: 57041190">
+                <button data-form="button" type="submit">Localizar</button>
+            </form>
+
+            <div class="cepReturn">
+                <span id="cepInvalido"></span>
+               <div id="dadosReturn">
+                    <p>Cep: <span id="cepAtual"></span></p>
+                    <p>Logradouro: <span id="logradouro"></span></p>
+                    <p>Bairro: <span id="bairro"></span></p>
+                    <p>Cidade: <span id="cidade"></span></p>
+                    <p>UF: <span id="uf"></span></p>
+               </div>
+            </div>
+       </div>
+    </main>
+
+    <footer class="footer">Em desenvolvimento</footer>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>
