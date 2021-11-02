@@ -12,6 +12,14 @@ function handleClick(event){
         bairro.textContent = data.bairro
         cidade.textContent = data.localidade
         uf.textContent = data.uf
+
+        if(data.erro === true){
+            dadosReturn.classList.add('errorActive')
+            cepInvalido.textContent = 'CEP INCORRETO, POR FAVOR, INSIRA UM CEP VÁLIDO!'
+        } else{
+            dadosReturn.classList.remove('errorActive')
+            cepInvalido.textContent = ''
+        }
     })
     
     const error = fetch(url).then(resp => {}).catch((error) => {
