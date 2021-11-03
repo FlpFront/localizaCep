@@ -9,13 +9,12 @@ body{
     font-family: 'Roboto', sans-serif;
     color: #fff;
     background: #1F1F23;
-    height: 100vh;
 }
 
 .container{
     display: flex;
     max-width: 1200px;
-    margin: 90px auto;
+    margin: 90px auto 40px auto;
 }
 
 .content{
@@ -118,7 +117,42 @@ body{
 .cepReturn span{
     font-size: 1.6rem;
     font-weight: 400;
-    margin-left: 10px;
+    margin-left: 5px;
+}
+
+
+#errorAlert{
+    width: 300px;
+    height: 100px;
+    background: #ff0000;
+    border-radius: 4px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+}
+
+#errorAlert.errorActive{
+    animation: error .3s forwards;
+}
+
+@keyframes error{
+    from{
+        transform: translate3d(-25px, 0, 0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+#errorAlert span{
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
 }
 
 @media (max-width: 800px){
@@ -151,24 +185,10 @@ body{
         color: #fff;
         font-size: 1.6rem;
     }
+
+    .cepReturn span{
+        font-weight: 400;
+        font-size: 1.4rem;
+    }
     
-}
-
-.errorActive{
-    display: none;
-}
-
-#cepInvalido{
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-align: center;
-}
-
-.footer{
-    text-align: center;
-    background: #9466FF;
-    padding: 20px 0;    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 1.8rem;
-    color: #fff;
 }

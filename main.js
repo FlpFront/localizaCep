@@ -14,22 +14,17 @@ function handleClick(event){
         uf.textContent = data.uf
 
         if(data.erro === true){
-            dadosReturn.classList.add('errorActive')
-            cepInvalido.textContent = 'CEP INCORRETO, POR FAVOR, INSIRA UM CEP VÁLIDO!'
-        } else{
-            dadosReturn.classList.remove('errorActive')
-            cepInvalido.textContent = ''
+            errorAlert.classList.add('errorActive')
         }
+            
     })
     
     const error = fetch(url).then(resp => {}).catch((error) => {
-        dadosReturn.classList.add('errorActive')
-        cepInvalido.textContent = 'CEP INCORRETO, POR FAVOR, INSIRA UM CEP VÁLIDO!'
+        errorAlert.classList.add('errorActive')
     })
 
-    if(dadosReturn.classList.contains('errorActive')){
-        dadosReturn.classList.remove('errorActive')
-        cepInvalido.textContent = ''
+    if(errorAlert.classList.contains('errorActive')){
+        errorAlert.classList.remove('errorActive')
     }
 
 }

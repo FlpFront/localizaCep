@@ -25,7 +25,6 @@
             </form>
 
             <div class="cepReturn">
-                <span id="cepInvalido"></span>
                <div id="dadosReturn">
                     <p>Cep: <span id="cepAtual"></span></p>
                     <p>Logradouro: <span id="logradouro"></span></p>
@@ -37,7 +36,9 @@
        </div>
     </main>
 
-    <footer class="footer">Em desenvolvimento</footer>
+    <div id="errorAlert">
+        <span>Cep inválido. <br> Por favor, informe um CEP válido.</span>
+    </div>
 
     <script src="main.js"></script>
     
