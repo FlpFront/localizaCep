@@ -16,7 +16,6 @@ function handleClick(event){
         if(data.erro === true){
             errorAlert.classList.add('errorActive')
         }
-            
     })
     
     const error = fetch(url).then(resp => {}).catch((error) => {
@@ -26,7 +25,6 @@ function handleClick(event){
     if(errorAlert.classList.contains('errorActive')){
         errorAlert.classList.remove('errorActive')
     }
-
 }
 
 button.addEventListener('click', handleClick)
